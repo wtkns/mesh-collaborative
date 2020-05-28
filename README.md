@@ -22,11 +22,11 @@ project goal: provide tools and framework for collaborative networked compostion
 
 
 ##### Agents: Nodes that provide Sources or Sinks
-    - Actors
-    - Audiences
-    - Dashboards
-    - Compositions
-    - volumes (data)
+   - Actors
+   - Audiences
+   - Dashboards
+   - Compositions
+   - volumes (data)
 
 ## example usage:
 
