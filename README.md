@@ -25,12 +25,15 @@ Mesh
 
 example system setup:
 
+``` 
 $> go test
 $> go build 
 $> go install mesh
+```
 
 example CLI usage: 
 
+```
 $> mesh auth gcp
 $> mesh start gcp hostname mesh-sesh 
 $> mesh mesh-sesh auth keygen ~/.ssh/mesh_rsa
@@ -54,18 +57,15 @@ mesh-sesh $> exit
 
 $> mesh stop mesh-sesh
 
-or
-
 $> mesh load ~/mesh-sesh.session
+```
 
-
-
-questions:
-    CLI api specification framework?
-    hosting on GCP/AWS? Ansible?
-    testing framework
-    authentication framework?
-    CI CD Testing toolchain? jenkins?
-    documentation 
-    gui/dashboard implementation? js?
+Questions:
+- CLI api specification framework?
+- hosting on GCP/AWS? Ansible?
+- testing framework
+- authentication framework?
+- CI CD Testing toolchain? jenkins?
+- documentation 
+- gui/dashboard implementation? js?
     
