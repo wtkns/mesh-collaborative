@@ -1,29 +1,34 @@
 project goal: provide tools and framework for collaborative networked compostion and performance 
 
-Mesh 
+# Mesh 
 
-    Mesh Session Manager offers an API (to control one or more hosts)
-    - registry
-    - authentication
+## Components 
 
-    Hosts publish Services and Agents
+### Mesh Session Manager offers an API (to control one or more hosts)
+  - registry
+  - authentication
 
-    Services: I/O Nodes offer Interfaces and perform Processes 
-    - Interfaces
-        - streams 
-        - controls
-    - Processes
-        - synths
-        - effects
+### Hosts publish Nodes (Services and Agents)
 
-    Agents: Nodes that offer Sources OR Sinks ()
+
+#### Nodes
+##### Services: Nodes that perform Processes 
+   - Interfaces
+      - streams 
+      - controls
+   - Processes
+      - synths
+      - effects
+
+
+##### Agents: Nodes that provide Sources or Sinks
     - Actors
-    - Audiences (devices)
-    - Displays / Dashboards
-    - Compositions Controllers
+    - Audiences
+    - Dashboards
+    - Compositions
     - volumes (data)
 
-example system setup:
+## example usage:
 
 ``` 
 $> go test
@@ -40,7 +45,9 @@ $> mesh mesh-sesh auth keygen ~/.ssh/mesh_rsa
 $> mesh mesh-sesh auth agent james robert jason jeff 
 $> mesh mesh-sesh auth agent youtube -f ~/.ssh/mesh_rsa
 $> mesh join mesh-sesh james
+```
 
+```
 mesh-sesh $> add scsynth synth1
 mesh-sesh $> add youtube audience
 mesh-sesh $> auth agent robert jason 
@@ -54,13 +61,15 @@ mesh-sesh $> audience start
 mesh-sesh $> score pause
 mesh-sesh $> session dump ~/mesh-sesh.session
 mesh-sesh $> exit
+```
 
+```
 $> mesh stop mesh-sesh
 
 $> mesh load ~/mesh-sesh.session
 ```
 
-Questions:
+## Questions:
 - CLI api specification framework?
 - hosting on GCP/AWS? Ansible?
 - testing framework
