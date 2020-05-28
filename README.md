@@ -70,11 +70,12 @@ $> mesh load ~/mesh-sesh.session
 ```
 
 ## Questions:
-- CLI api specification framework?
-- hosting on GCP/AWS? Ansible?
+- language? Go 
+- CLI api specification framework? https://github.com/spf13/cobra
+- deployment on GCP/AWS? Ansible?
 - testing framework
 - authentication framework?
-- CI CD Testing toolchain? jenkins?
+- CI CD Testing toolchain? Travis? jenkins?
 - documentation 
 - gui/dashboard implementation? js?
     
