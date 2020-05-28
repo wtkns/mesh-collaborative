@@ -1,22 +1,30 @@
-project goal: provide tools and framework for collaborative networked compostion and performance 
-
 Mesh 
 
-    Mesh Session Manager offers an API (to control one or more hosts)
-    - registry
+Project goal:   provide tools and framework for collaborative networked compostion and performance
+
+Approach:       CLI API for managing extensible, discoverable graph of distributed microservices
+                and authorization of agents, with reproducible sessions 
+
+
+Components:
+
+    Session Manager: offers an API (to control one or more hosts)
+    - service registry
     - authentication
+    - deployment
+    - discovery
 
-    Hosts publish Services and Agents
+    Hosts: publish Services and Agents
 
-    Services: I/O Nodes offer Interfaces and perform Processes 
-    - Interfaces
-        - streams 
-        - controls
-    - Processes
-        - synths
+    Services: I/O Nodes
+    - Offer: Interfaces
+        - streams  (e.g. audio data)
+        - controls (discrete parameter changes)
+    - Perform: Processes
+        - synths ()
         - effects
 
-    Agents: Nodes that offer Sources OR Sinks ()
+    Agents: Nodes (leaf node) that offer Sources OR Sinks ()
     - Actors
     - Audiences (devices)
     - Displays / Dashboards
@@ -61,11 +69,32 @@ $> mesh load ~/mesh-sesh.session
 
 
 questions:
-    CLI api specification framework?
-    hosting on GCP/AWS? Ansible?
-    testing framework
-    authentication framework?
-    CI CD Testing toolchain? jenkins?
-    documentation 
+    CLI api specification framework? OpenAPI, Cobra? promptui? 
+    registry key storage? etcd?
+    provisioning on GCP/AWS? Ansible
+    testing framework? 
+    authentication framework? OAuth? OpenID?
+    build system? go? maven? basel
+    CI CD Testing toolchain? travis jenkins?
+    documentation (man/helpfiles/website) 
     gui/dashboard implementation? js?
-    
+
+
+
+Flow example:
+
++-+    +-+    +-+    +-+
+a | -> |c| -> |d| -> + e
++-+    +-+    +-+    +-+
+        ^      v
+       +-+    +-+    +-+
+       |b|    |f| -> | g
+       + +    +-+    +-+
+
+a: score
+b: parameter dashboard
+c: synth
+d: effects
+e: youtube audio-stream 
+f: visualizer
+g: youtube video-stream
