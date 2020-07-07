@@ -1,3 +1,0 @@
-mkdir ~/.abuild
-docker cp keys:/home/builder/.abuild/team@gliderlabs.com-5592f9b1.rsa ~/.abuild/
-docker cp keys:/home/builder/.abuild/team@gliderlabs.com-5592f9b1.rsa.pub ~/.abuild/
